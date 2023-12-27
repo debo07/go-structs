@@ -15,8 +15,7 @@ type person struct {
 }
 
 type personWithAddress struct {
-	firstName string
-	lastName string
+	person
 	address
 }
 
@@ -43,8 +42,11 @@ func main() {
 	// Nested struct
 	// Notice state is not set, so zero value is assigned
 	p4 := personWithAddress {
-		firstName: "Debajit",
-		lastName: "Majumder",
+		person: person{
+			firstName: "Debajit",
+			lastName: "Majumder",
+		},
+		
 		address: address{
 			lane: "Street 1",
 			city: "Pune",
