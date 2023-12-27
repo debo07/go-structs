@@ -46,7 +46,6 @@ func main() {
 			firstName: "Debajit",
 			lastName: "Majumder",
 		},
-		
 		address: address{
 			lane: "Street 1",
 			city: "Pune",
@@ -54,4 +53,11 @@ func main() {
 		},
 	}
 	fmt.Printf("%+v \n", p4)
+
+	p4.print()
+}
+
+// Receiver function on struct
+func (p personWithAddress) print() {
+	fmt.Printf("%+v \n", p)
 }
