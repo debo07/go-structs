@@ -17,7 +17,7 @@ type person struct {
 type personWithAddress struct {
 	firstName string
 	lastName string
-	address address
+	address
 }
 
 func main() {
