@@ -52,12 +52,23 @@ func main() {
 			pinCode: 411080,
 		},
 	}
+	fmt.Println(p4.firstName)
+	fmt.Println(p4.person.firstName)
 	fmt.Printf("%+v \n", p4)
 
 	p4.print()
+	p4.updateName("Debo1")
+	p4.print()
+	fmt.Println(p4.firstName)
+	fmt.Println(p4.person.firstName)
 }
 
 // Receiver function on struct
 func (p personWithAddress) print() {
 	fmt.Printf("%+v \n", p)
+}
+
+func (p *personWithAddress) updateName(newName string) {
+	//(*p).person.firstName = newName
+	(*p).firstName = newName
 }
